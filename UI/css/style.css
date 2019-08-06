@@ -32,8 +32,7 @@ body{
 	height: auto;
 	background-color: #f3f3f3;
 	font-family: Arial;
-/*	font-family: Brush Script Std;
-*/	font-size: 20px;
+	font-size: 20px;
 	color: #336633
 	text-align:center;
 
@@ -83,10 +82,6 @@ label{
 	font-size: 20px;
 	color: #333333;
 	font-family: Verdana;
-	margin-top: 0px;
-	margin-bottom: 70px;
-	padding-top: 70px;
-	padding-bottom: 70px;
 	width: 20%;
 }
 .btn{
@@ -115,16 +110,27 @@ label{
 }
 input{
 	width: 60%;
-	height: 20px;
+	height: 10px;
 	border-radius: 2px;
 	text-align: center;
-	margin-top: 10px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+select{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 60%;
+	height: 30px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+
 }
 h1,h2{
 	text-align: center;
 	color: black;
 	margin-top: 20px;
-	/*font-size: 25px;*/
 	font-family: Verdana,Arial;
 }
 h3{
@@ -142,11 +148,7 @@ p{
 th{
 	background-color: #4CAF50;
 }
-/*table{
-	width: 70%;
-	height: 30%;
-	margin-top: 2px;
-}*/
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -159,16 +161,10 @@ td, th {
   padding: 8px;
 
 }
-/*th{background-color: #666666;}
-*/
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-/*#colour1{
-	width: 100%
-	height:20%;
-	background-color: #66ff99;*/
-}
+
 b{
 	font-size: 30px;
 }
