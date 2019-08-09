@@ -1,9 +1,9 @@
 import express from 'express';
 
-import booking_data from '../models/booking_file';
+import bookingData from '../models/booking_file';
 
     const deleteBooking = (req, res)=>{
-        const bookingToDelete = booking_data.filter(booking => booking.booking_id === parseInt(req.params.booking_id))[0];
+        const bookingToDelete = bookingData.filter(booking => booking.booking_id === parseInt(req.params.booking_id))[0];
         console.log(bookingToDelete);
         if (!bookingToDelete){
             res.status(404).json({
@@ -11,15 +11,15 @@ import booking_data from '../models/booking_file';
                 error:"The given id not found"
             });
         } else {
-            const bookings$ = booking_data.filter(booking => booking.booking_id === parseInt(req.params.booking_id));
+            const bookings$ = bookingData.filter(booking => booking.booking_id === parseInt(req.params.booking_id));
             if(!bookings$){
                return res.status(404).json({
                     status:"error",
                     error:"Booking not found"
                 })
             }else{
-                const index = booking_data.indexOf(bookings$);
-                booking_data.splice(index,1);
+                const index = bookingData.indexOf(bookings$);
+                bookingData.splice(index,1);
                 return res.status(200).json({
                     status:"success",
                     message:"Booking deleted successfully"
