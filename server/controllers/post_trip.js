@@ -21,8 +21,8 @@ const post_trip = (req, res) => {
             error: error.details[0].message,
         });
     }
-    let stat = active;
-    const new_trip = {
+
+    const newTrip = {
         
         trip_id: trips.length + 1,
         sitting_capacity: req.body.sitting_capacity,
@@ -32,11 +32,10 @@ const post_trip = (req, res) => {
         fare: req.body.fare,
         status: req.body.status,
     }
-    console.log(status);
-    trips.push(new_trip);
+    trips.push(newTrip);
     return res.status(201).json({
         status: 'success',
-        data: new_trip
+        data: newTrip
     });
 }
 export default post_trip;

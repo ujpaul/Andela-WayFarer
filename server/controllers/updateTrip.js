@@ -5,7 +5,7 @@ import trips from '../models/trip_file';
 
 import tripValidation from '../helpers/trip_validation'
     
-const update_trip= (req, res)=>{
+const updateTrip= (req, res)=>{
    
 const id = trips.filter(id=>id.trip_id === parseInt(req.params.trip_id));
 if(!id){
@@ -35,6 +35,6 @@ return res.status(400).send({
     error:"you should enter cancelled to cancel trip"
 })
 }
-export default  update_trip;
+export default  updateTrip;
 
 

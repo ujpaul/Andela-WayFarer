@@ -1,5 +1,5 @@
 
-import user_file from '../models/user_file';
+import userFile from '../models/user_file';
 
 import jwt from 'jsonwebtoken';
 import userValidation from '../helpers/signup_validation';
@@ -21,7 +21,7 @@ const { error } = userValidation.validation(req.body);
     return;
   }
 
-  const email = user_file.find(user => user.email === req.body.email);
+  const email = userFile.find(user => user.email === req.body.email);
 
   if (email) {
     res.status(400).json({
@@ -50,7 +50,7 @@ const { error } = userValidation.validation(req.body);
     is_admin:req.body.is_admin
   };
 
-  user_file.push(newUser);
+  userFile.push(newUser);
 
   return res.status(201).json({
     status: 201,
